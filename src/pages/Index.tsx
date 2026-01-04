@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+import { Gamepad2 } from "lucide-react";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import ProfilePhoto from "@/components/ProfilePhoto";
 import FamilyCard from "@/components/FamilyCard";
@@ -5,7 +7,6 @@ import myImage from "@/assets/my_image.jpeg";
 import brotherImage from "@/assets/brother.jpeg";
 import momImage from "@/assets/mom.png";
 import dadImage from "@/assets/dad.jpg";
-import funnyVideo from "@/assets/funny-video.mp4";
 
 const Index = () => {
   return (
@@ -54,22 +55,24 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Funny Video Section */}
-      <section id="funny-video" className="px-4 py-8">
+      {/* Geometry Dash Section */}
+      <section className="px-4 py-8">
         <div className="max-w-lg mx-auto">
           <h2 className="text-2xl font-bold text-center text-foreground mb-6">
-            Funny Video
+            Geometry Dash
           </h2>
-          <div className="rounded-xl overflow-hidden border border-border shadow-lg hover-glow">
-            <video
-              controls
-              className="w-full"
-              poster=""
-            >
-              <source src={funnyVideo} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
+          <Link
+            to="/games"
+            className="block rounded-xl overflow-hidden border border-border shadow-lg hover-glow hover-scale bg-card/50 p-6"
+          >
+            <div className="flex flex-col items-center gap-4">
+              <Gamepad2 className="w-16 h-16 text-primary" />
+              <h3 className="text-xl font-bold text-foreground">Play Geometry Dash</h3>
+              <p className="text-muted-foreground text-center">
+                Click to play my favorite rhythm-based platformer game!
+              </p>
+            </div>
+          </Link>
         </div>
       </section>
     </div>

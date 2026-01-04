@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, User, Users, Gamepad2, Video, ChevronDown, ChevronUp } from "lucide-react";
+import { Menu, X, User, Users, Gamepad2, Home, ChevronDown, ChevronUp } from "lucide-react";
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -77,27 +77,30 @@ const HamburgerMenu = () => {
                     <Link
                       to="/family/brother"
                       onClick={closeMenu}
-                      className="block p-3 rounded-lg hover:bg-secondary/50 transition-colors text-muted-foreground hover:text-foreground"
+                      className="block p-3 rounded-lg hover:bg-red-900/50 transition-colors text-muted-foreground hover:text-red-200 group"
                     >
-                      Brother - Reejan
+                      <span className="font-medium">Brother - Reejan</span>
+                      <p className="text-xs opacity-70 group-hover:opacity-100">My amazing younger brother</p>
                     </Link>
                   </li>
                   <li>
                     <Link
                       to="/family/mom"
                       onClick={closeMenu}
-                      className="block p-3 rounded-lg hover:bg-secondary/50 transition-colors text-muted-foreground hover:text-foreground"
+                      className="block p-3 rounded-lg hover:bg-red-900/50 transition-colors text-muted-foreground hover:text-red-200 group"
                     >
-                      Mom - Ritu
+                      <span className="font-medium">Mom - Ritu</span>
+                      <p className="text-xs opacity-70 group-hover:opacity-100">The heart of our family</p>
                     </Link>
                   </li>
                   <li>
                     <Link
                       to="/family/dad"
                       onClick={closeMenu}
-                      className="block p-3 rounded-lg hover:bg-secondary/50 transition-colors text-muted-foreground hover:text-foreground"
+                      className="block p-3 rounded-lg hover:bg-red-900/50 transition-colors text-muted-foreground hover:text-red-200 group"
                     >
-                      Dad - Kiran
+                      <span className="font-medium">Dad - Kiran</span>
+                      <p className="text-xs opacity-70 group-hover:opacity-100">Our family's guiding light</p>
                     </Link>
                   </li>
                 </ul>
@@ -116,16 +119,16 @@ const HamburgerMenu = () => {
               </Link>
             </li>
 
-            {/* Funny Videos */}
+            {/* Exit/Home Button */}
             <li>
-              <a
-                href="#funny-video"
+              <Link
+                to="/"
                 onClick={closeMenu}
                 className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 transition-colors link-underline"
               >
-                <Video className="w-5 h-5 text-primary" />
-                <span className="text-foreground font-medium">Funny Videos</span>
-              </a>
+                <Home className="w-5 h-5 text-primary" />
+                <span className="text-foreground font-medium">Exit to Home</span>
+              </Link>
             </li>
           </ul>
         </nav>

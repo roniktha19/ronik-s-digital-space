@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Gamepad2 } from "lucide-react";
+import { Gamepad2, Zap, Star, Triangle } from "lucide-react";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import ProfilePhoto from "@/components/ProfilePhoto";
 import FamilyCard from "@/components/FamilyCard";
@@ -63,14 +63,30 @@ const Index = () => {
           </h2>
           <Link
             to="/games"
-            className="block rounded-xl overflow-hidden border border-border shadow-lg hover-glow hover-scale bg-card/50 p-6"
+            className="group block rounded-xl overflow-hidden border border-border shadow-lg hover:shadow-primary/30 hover:border-primary/50 bg-gradient-to-br from-card/80 to-primary/10 p-6 transition-all duration-300 hover:scale-[1.02] relative"
           >
-            <div className="flex flex-col items-center gap-4">
-              <Gamepad2 className="w-16 h-16 text-primary" />
-              <h3 className="text-xl font-bold text-foreground">Play Geometry Dash</h3>
-              <p className="text-muted-foreground text-center">
+            {/* Animated background elements */}
+            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+              <Star className="absolute top-4 left-4 w-4 h-4 text-yellow-400 animate-pulse" />
+              <Zap className="absolute top-6 right-8 w-5 h-5 text-primary animate-bounce" style={{ animationDelay: '0.2s' }} />
+              <Triangle className="absolute bottom-8 left-8 w-4 h-4 text-green-400 animate-pulse" style={{ animationDelay: '0.4s' }} />
+              <Star className="absolute bottom-4 right-4 w-3 h-3 text-yellow-400 animate-ping" style={{ animationDelay: '0.6s' }} />
+            </div>
+            
+            <div className="flex flex-col items-center gap-4 relative z-10">
+              <div className="relative">
+                <Gamepad2 className="w-20 h-20 text-primary group-hover:scale-110 transition-transform duration-300" />
+                <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full group-hover:bg-primary/40 transition-colors duration-300" />
+              </div>
+              <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
+                Play Geometry Dash
+              </h3>
+              <p className="text-muted-foreground text-center group-hover:text-foreground transition-colors duration-300">
                 Click to play my favorite rhythm-based platformer game!
               </p>
+              <span className="px-4 py-2 bg-primary/20 text-primary rounded-full text-sm font-medium group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                Start Playing →
+              </span>
             </div>
           </Link>
         </div>

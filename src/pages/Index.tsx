@@ -7,6 +7,8 @@ import myImage from "@/assets/my_image.jpeg";
 import brotherImage from "@/assets/brother.jpeg";
 import momImage from "@/assets/mom.png";
 import dadImage from "@/assets/dad.jpg";
+import geometryDashImage from "@/assets/geometry-dash.png";
+import funnyVideo from "@/assets/funny-video.mp4";
 
 const Index = () => {
   return (
@@ -15,12 +17,15 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="pt-16 pb-12 px-4">
-        <div className="max-w-md mx-auto flex flex-col items-center text-center">
-          <ProfilePhoto src={myImage} alt="Ronik Thapa Chhetri" />
-          <h1 className="mt-6 text-3xl font-bold text-foreground">
-            Hello, I am <span className="text-primary">Ronik Thapa Chhetri!</span>
+        <div className="max-w-md mx-auto flex flex-col items-center text-center animate-fade-in">
+          <div className="relative group">
+            <ProfilePhoto src={myImage} alt="Ronik Thapa Chhetri" />
+            <div className="absolute inset-0 rounded-full bg-primary/20 blur-2xl -z-10 group-hover:bg-primary/40 transition-all duration-500 animate-pulse" />
+          </div>
+          <h1 className="mt-6 text-3xl font-bold text-foreground animate-fade-in" style={{ animationDelay: '0.2s' }}>
+            Hello, I am <span className="text-primary bg-gradient-to-r from-primary to-blue-400 bg-clip-text text-transparent">Ronik Thapa Chhetri!</span>
           </h1>
-          <p className="mt-4 text-muted-foreground leading-relaxed">
+          <p className="mt-4 text-muted-foreground leading-relaxed animate-fade-in" style={{ animationDelay: '0.3s' }}>
             A 12-year-old student from Nepal who loves cycling, drawing, and exploring the world of computers!
           </p>
         </div>
@@ -29,28 +34,34 @@ const Index = () => {
       {/* Family Section */}
       <section className="px-4 py-8">
         <div className="max-w-lg mx-auto">
-          <h2 className="text-2xl font-bold text-center text-foreground mb-6">
+          <h2 className="text-2xl font-bold text-center text-foreground mb-6 animate-fade-in">
             My Family
           </h2>
           <div className="grid grid-cols-3 gap-4">
-            <FamilyCard
-              name="Reejan"
-              relation="Brother"
-              image={brotherImage}
-              link="/family/brother"
-            />
-            <FamilyCard
-              name="Ritu"
-              relation="Mom"
-              image={momImage}
-              link="/family/mom"
-            />
-            <FamilyCard
-              name="Kiran"
-              relation="Dad"
-              image={dadImage}
-              link="/family/dad"
-            />
+            <div className="animate-fade-in hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.1s' }}>
+              <FamilyCard
+                name="Reejan"
+                relation="Brother"
+                image={brotherImage}
+                link="/family/brother"
+              />
+            </div>
+            <div className="animate-fade-in hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.2s' }}>
+              <FamilyCard
+                name="Ritu"
+                relation="Mom"
+                image={momImage}
+                link="/family/mom"
+              />
+            </div>
+            <div className="animate-fade-in hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.3s' }}>
+              <FamilyCard
+                name="Kiran"
+                relation="Dad"
+                image={dadImage}
+                link="/family/dad"
+              />
+            </div>
           </div>
         </div>
       </section>
@@ -58,12 +69,12 @@ const Index = () => {
       {/* Geometry Dash Section */}
       <section className="px-4 py-8">
         <div className="max-w-lg mx-auto">
-          <h2 className="text-2xl font-bold text-center text-foreground mb-6">
+          <h2 className="text-2xl font-bold text-center text-foreground mb-6 animate-fade-in">
             Geometry Dash
           </h2>
           <Link
             to="/games"
-            className="group block rounded-xl overflow-hidden border border-border shadow-lg hover:shadow-primary/30 hover:border-primary/50 bg-gradient-to-br from-card/80 to-primary/10 p-6 transition-all duration-300 hover:scale-[1.02] relative"
+            className="group block rounded-xl overflow-hidden border border-border shadow-lg hover:shadow-primary/30 hover:border-primary/50 bg-gradient-to-br from-card/80 to-primary/10 p-6 transition-all duration-300 hover:scale-[1.02] relative animate-fade-in"
           >
             {/* Animated background elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -75,7 +86,11 @@ const Index = () => {
             
             <div className="flex flex-col items-center gap-4 relative z-10">
               <div className="relative">
-                <Gamepad2 className="w-20 h-20 text-primary group-hover:scale-110 transition-transform duration-300" />
+                <img 
+                  src={geometryDashImage} 
+                  alt="Geometry Dash" 
+                  className="w-24 h-24 rounded-xl object-cover group-hover:scale-110 transition-transform duration-300"
+                />
                 <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full group-hover:bg-primary/40 transition-colors duration-300" />
               </div>
               <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
@@ -89,6 +104,25 @@ const Index = () => {
               </span>
             </div>
           </Link>
+        </div>
+      </section>
+
+      {/* Funny Video Section */}
+      <section id="funny-video" className="px-4 py-8">
+        <div className="max-w-lg mx-auto">
+          <h2 className="text-2xl font-bold text-center text-foreground mb-6 animate-fade-in">
+            Funny Video
+          </h2>
+          <div className="rounded-xl overflow-hidden border border-border shadow-lg hover-glow animate-fade-in hover:scale-[1.02] transition-transform duration-300">
+            <video
+              controls
+              className="w-full"
+              poster=""
+            >
+              <source src={funnyVideo} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
       </section>
     </div>

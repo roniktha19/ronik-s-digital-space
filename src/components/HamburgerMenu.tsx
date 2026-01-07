@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, User, Users, Gamepad2, Video, Home, ChevronDown, ChevronUp } from "lucide-react";
+import { Menu, X, User, Users, Gamepad2, Home, ChevronDown, ChevronUp } from "lucide-react";
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -105,18 +105,6 @@ const HamburgerMenu = () => {
                   </li>
                 </ul>
               )}
-            </li>
-
-            {/* Funny Videos */}
-            <li>
-              <a
-                href="/#funny-video"
-                onClick={closeMenu}
-                className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 transition-colors link-underline"
-              >
-                <Video className="w-5 h-5 text-primary" />
-                <span className="text-foreground font-medium">Funny Videos</span>
-              </a>
             </li>
 
             {/* Games */}

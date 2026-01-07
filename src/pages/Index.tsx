@@ -7,7 +7,7 @@ import brotherImage from "@/assets/brother.jpeg";
 import momImage from "@/assets/mom.png";
 import dadImage from "@/assets/dad.jpg";
 import geometryDashImage from "@/assets/geometry-dash.png";
-import { Gamepad2, Star, Zap, School, BookOpen, Users, Award } from "lucide-react";
+import { Gamepad2, Star, Zap, School } from "lucide-react";
 
 const Index = () => {
   return (
@@ -46,8 +46,9 @@ const Index = () => {
           <h2 className="text-4xl font-bold text-center mb-12 neon-glow">
             My Family
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="shimmer rounded-2xl">
+          {/* Brother at top */}
+          <div className="flex justify-center mb-8">
+            <div className="shimmer rounded-2xl w-full max-w-xs">
               <FamilyCard
                 name="Reejan"
                 relation="Brother"
@@ -55,6 +56,9 @@ const Index = () => {
                 link="/family/brother"
               />
             </div>
+          </div>
+          {/* Mom and Dad below */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-2xl mx-auto">
             <div className="shimmer rounded-2xl" style={{ animationDelay: '0.2s' }}>
               <FamilyCard
                 name="Ritu"
@@ -77,64 +81,20 @@ const Index = () => {
 
       {/* My School Section */}
       <section id="my-school" className="relative z-10 py-16 px-4">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 rainbow-text">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-4xl font-bold mb-8 rainbow-text">
             🏫 My School 🏫
           </h2>
-          
-          <div className="bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-teal-500/20 rounded-3xl p-8 md:p-12 glow-border">
-            <div className="text-center mb-8">
-              <div className="inline-flex items-center gap-3 bg-blue-500/20 px-6 py-3 rounded-full mb-4 color-pulse">
-                <School className="w-8 h-8 text-blue-400" />
-                <h3 className="text-2xl md:text-3xl font-bold text-blue-300 neon-glow">
-                  Gaidakot Namuna Secondary School
-                </h3>
-              </div>
-              <p className="text-muted-foreground text-lg">
-                📍 Gaidakot Municipality–Ward No. 2, Nawalparasi (East), Nepal
-              </p>
+          <div className="bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-teal-500/20 rounded-3xl p-8 glow-border">
+            <div className="inline-flex items-center gap-3 bg-blue-500/20 px-6 py-3 rounded-full mb-4 color-pulse">
+              <School className="w-6 h-6 text-blue-400" />
+              <h3 className="text-xl font-bold text-blue-300">
+                Gaidakot Namuna Secondary School
+              </h3>
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-              {/* Primary Building Card */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 shimmer hover:scale-105 transition-transform duration-300">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-green-500/20 rounded-full color-pulse">
-                    <BookOpen className="w-6 h-6 text-green-400" />
-                  </div>
-                  <h4 className="text-xl font-bold text-green-300">Primary School Building</h4>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  Where young students begin their educational journey. This building focuses on building strong foundations in basic subjects, good manners, discipline, and creativity. Classrooms are designed to help children feel comfortable and motivated to learn.
-                </p>
-              </div>
-
-              {/* Secondary Building Card */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 shimmer hover:scale-105 transition-transform duration-300" style={{ animationDelay: '0.2s' }}>
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-3 bg-purple-500/20 rounded-full color-pulse">
-                    <Users className="w-6 h-6 text-purple-400" />
-                  </div>
-                  <h4 className="text-xl font-bold text-purple-300">Secondary & College (+2) Building</h4>
-                </div>
-                <p className="text-muted-foreground leading-relaxed">
-                  Supports higher-level education and helps students prepare for future studies and careers. Teachers guide students not only in studies but also in discipline, leadership, and responsibility.
-                </p>
-              </div>
-            </div>
-
-            {/* School Mission */}
-            <div className="bg-gradient-to-r from-amber-500/20 via-orange-500/10 to-yellow-500/20 rounded-2xl p-6 gradient-animate">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 bg-amber-500/20 rounded-full color-pulse">
-                  <Award className="w-6 h-6 text-amber-400" />
-                </div>
-                <h4 className="text-xl font-bold text-amber-300">Our Mission</h4>
-              </div>
-              <p className="text-muted-foreground leading-relaxed text-lg">
-                Gaidakot Namuna Secondary School aims to provide quality education, encourage good character, and help students become responsible citizens. The school plays an important role in the educational development of the Gaidakot area and continues to serve students with dedication and commitment.
-              </p>
-            </div>
+            <p className="text-muted-foreground">
+              📍 Gaidakot Municipality, Nawalparasi (East), Nepal
+            </p>
           </div>
         </div>
       </section>

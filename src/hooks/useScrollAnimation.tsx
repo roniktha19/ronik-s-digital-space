@@ -7,9 +7,8 @@ export const useScrollAnimation = () => {
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
+        // Trigger animation both when entering AND leaving viewport
+        setIsVisible(entry.isIntersecting);
       },
       { threshold: 0.1 }
     );

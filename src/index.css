@@ -181,6 +181,73 @@
       0 0 40px hsl(280 80% 60%);
     animation: neon-flicker 1.5s infinite alternate;
   }
+
+  /* Scroll slide-in animations */
+  .slide-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .slide-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .slide-in-up {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .slide-in-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .slide-in-down {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  .slide-in-down.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Menu hover animation */
+  .menu-item-hover {
+    @apply transition-all duration-300 ease-out;
+  }
+  .menu-item-hover:hover {
+    @apply translate-x-2 scale-105;
+    background: linear-gradient(90deg, hsl(199 89% 48% / 0.2), transparent);
+  }
+
+  /* Button glow effect */
+  .btn-glow {
+    @apply relative overflow-hidden transition-all duration-300;
+  }
+  .btn-glow::before {
+    content: '';
+    @apply absolute inset-0 opacity-0 transition-opacity duration-300;
+    background: linear-gradient(45deg, hsl(199 89% 48% / 0.5), hsl(280 80% 60% / 0.5));
+  }
+  .btn-glow:hover::before {
+    @apply opacity-100;
+  }
+  .btn-glow:hover {
+    box-shadow: 0 0 25px hsl(199 89% 48% / 0.6), 0 0 50px hsl(280 80% 60% / 0.3);
+    transform: translateY(-2px);
+  }
 }
 
 @keyframes rainbow-shift {

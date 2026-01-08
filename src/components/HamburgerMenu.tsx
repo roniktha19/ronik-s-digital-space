@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X, User, Users, Gamepad2, Home, ChevronDown, ChevronUp } from "lucide-react";
+import { Menu, X, User, Users, Gamepad2, Home, ChevronDown, ChevronUp, School } from "lucide-react";
 
 const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,7 +48,7 @@ const HamburgerMenu = () => {
               <Link
                 to="/about"
                 onClick={closeMenu}
-                className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 transition-colors link-underline"
+                className="flex items-center gap-3 p-4 rounded-lg menu-item-hover link-underline"
               >
                 <User className="w-5 h-5 text-primary" />
                 <span className="text-foreground font-medium">About Myself</span>
@@ -59,7 +59,7 @@ const HamburgerMenu = () => {
             <li>
               <button
                 onClick={() => setFamilyOpen(!familyOpen)}
-                className="flex items-center justify-between w-full p-4 rounded-lg hover:bg-secondary/50 transition-colors"
+                className="flex items-center justify-between w-full p-4 rounded-lg menu-item-hover"
               >
                 <div className="flex items-center gap-3">
                   <Users className="w-5 h-5 text-primary" />
@@ -107,12 +107,24 @@ const HamburgerMenu = () => {
               )}
             </li>
 
+            {/* My School */}
+            <li>
+              <Link
+                to="/#my-school"
+                onClick={closeMenu}
+                className="flex items-center gap-3 p-4 rounded-lg menu-item-hover link-underline"
+              >
+                <School className="w-5 h-5 text-primary" />
+                <span className="text-foreground font-medium">My School</span>
+              </Link>
+            </li>
+
             {/* Games */}
             <li>
               <Link
                 to="/games"
                 onClick={closeMenu}
-                className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 transition-colors link-underline"
+                className="flex items-center gap-3 p-4 rounded-lg menu-item-hover link-underline"
               >
                 <Gamepad2 className="w-5 h-5 text-primary" />
                 <span className="text-foreground font-medium">Geometry Dash</span>
@@ -124,7 +136,7 @@ const HamburgerMenu = () => {
               <Link
                 to="/"
                 onClick={closeMenu}
-                className="flex items-center gap-3 p-4 rounded-lg hover:bg-secondary/50 transition-colors link-underline"
+                className="flex items-center gap-3 p-4 rounded-lg menu-item-hover link-underline"
               >
                 <Home className="w-5 h-5 text-primary" />
                 <span className="text-foreground font-medium">Exit to Home</span>

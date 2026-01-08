@@ -62,8 +62,20 @@ const Dad = () => {
                       <p className="text-sm text-sky-400/70 mt-2">
                         Medical Equipment & Physiotherapy Supplies
                       </p>
+                      <p className="text-xs text-cyan-500/60 mt-2 font-mono">
+                        📍 Coordinates: 27.70248, 84.41637
+                      </p>
                     </div>
                   </div>
+                  <a 
+                    href="https://www.google.com/maps?q=27.70248209644719,84.41637499114283" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 p-3 bg-gradient-to-r from-sky-600 to-cyan-600 rounded-lg text-white font-semibold hover:from-sky-500 hover:to-cyan-500 transition-all btn-glow"
+                  >
+                    <MapPin className="w-5 h-5" />
+                    View on Google Maps
+                  </a>
                   <div className="flex items-center gap-3 p-3 bg-sky-950/30 rounded-lg">
                     <Phone className="w-5 h-5 text-green-400" />
                     <span className="text-foreground">Contact: 9801983833</span>

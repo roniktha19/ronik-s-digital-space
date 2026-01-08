@@ -115,9 +115,16 @@ const Index = () => {
                   Gaidakot Namuna Secondary School
                 </h3>
               </div>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground mb-6">
                 📍 Gaidakot Municipality, Nawalparasi (East), Nepal
               </p>
+              <Link
+                to="/school"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-primary-foreground px-8 py-4 rounded-full font-bold btn-glow shimmer"
+              >
+                <School className="w-5 h-5" />
+                View School Details
+              </Link>
             </div>
           </ScrollSection>
         </div>

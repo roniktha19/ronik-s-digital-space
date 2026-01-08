@@ -110,7 +110,7 @@ const HamburgerMenu = () => {
             {/* My School */}
             <li>
               <Link
-                to="/#my-school"
+                to="/school"
                 onClick={closeMenu}
                 className="flex items-center gap-3 p-4 rounded-lg menu-item-hover link-underline"
               >

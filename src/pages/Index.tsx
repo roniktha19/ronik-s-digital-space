@@ -8,7 +8,7 @@ import brotherImage from "@/assets/brother.jpeg";
 import momImage from "@/assets/mom.png";
 import dadImage from "@/assets/dad.jpg";
 import geometryDashImage from "@/assets/geometry-dash.png";
-import { Gamepad2, Star, Zap, School, User } from "lucide-react";
+import { Gamepad2, Star, Zap, School, User, MapPin, Building, BookOpen, GraduationCap } from "lucide-react";
 
 const Index = () => {
   return (
@@ -109,15 +109,90 @@ const Index = () => {
           </ScrollSection>
           <ScrollSection animation="up" delay={200}>
             <div className="bg-gradient-to-br from-blue-500/20 via-cyan-500/10 to-teal-500/20 rounded-3xl p-8 glow-border">
-              <div className="inline-flex items-center gap-3 bg-blue-500/20 px-6 py-3 rounded-full mb-4 color-pulse">
+              {/* School Name */}
+              <div className="inline-flex items-center gap-3 bg-blue-500/20 px-6 py-3 rounded-full mb-6 color-pulse">
                 <School className="w-6 h-6 text-blue-400" />
-                <h3 className="text-xl font-bold text-blue-300">
+                <h3 className="text-2xl font-bold text-blue-300">
                   Gaidakot Namuna Secondary School
                 </h3>
               </div>
-              <p className="text-muted-foreground">
-                📍 Gaidakot Municipality, Nawalparasi (East), Nepal
-              </p>
+              
+              {/* Location */}
+              <div className="flex items-center justify-center gap-2 text-muted-foreground mb-6">
+                <MapPin className="w-5 h-5 text-red-400" />
+                <p>Gaidakot Municipality–Ward No. 2, Nawalparasi (East), Nepal</p>
+              </div>
+
+              {/* School Description */}
+              <div className="text-left space-y-4 mb-8">
+                <p className="text-foreground/80 leading-relaxed">
+                  Gaidakot Namuna Secondary School is a well-known educational institution providing quality education to students from primary to higher secondary levels.
+                </p>
+                
+                {/* Buildings Info */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
+                  <div className="bg-blue-500/10 rounded-xl p-4 text-left">
+                    <div className="flex items-center gap-2 mb-2">
+                      <Building className="w-5 h-5 text-cyan-400" />
+                      <h4 className="font-bold text-cyan-300">Primary Building</h4>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      Used for primary school classes (Nursery to Grade 5)
+                    </p>
+                  </div>
+                  <div className="bg-purple-500/10 rounded-xl p-4 text-left">
+                    <div className="flex items-center gap-2 mb-2">
+                      <GraduationCap className="w-5 h-5 text-purple-400" />
+                      <h4 className="font-bold text-purple-300">Secondary Building</h4>
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      Used for secondary level and college (+2) classes
+                    </p>
+                  </div>
+                </div>
+
+                {/* Education Levels */}
+                <div className="bg-green-500/10 rounded-xl p-4 mt-4">
+                  <div className="flex items-center gap-2 mb-2">
+                    <BookOpen className="w-5 h-5 text-green-400" />
+                    <h4 className="font-bold text-green-300">Education Levels</h4>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    Primary (Nursery - Grade 5) • Secondary (Grade 6 - 10) • Higher Secondary (+2)
+                  </p>
+                </div>
+              </div>
+
+              {/* Map Coordinates */}
+              <div className="bg-orange-500/10 rounded-xl p-4 mb-6">
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <MapPin className="w-5 h-5 text-orange-400" />
+                  <h4 className="font-bold text-orange-300">📍 School Location</h4>
+                </div>
+                <p className="text-sm text-muted-foreground font-mono">
+                  Coordinates: 27.70248209644719, 84.41637499114283
+                </p>
+                <a 
+                  href="https://www.google.com/maps?q=27.70248209644719,84.41637499114283" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-3 bg-orange-500/20 hover:bg-orange-500/30 text-orange-300 px-4 py-2 rounded-full text-sm transition-all"
+                >
+                  <MapPin className="w-4 h-4" />
+                  View on Google Maps
+                </a>
+              </div>
+
+              {/* School Button */}
+              <a
+                href="https://www.google.com/maps?q=27.70248209644719,84.41637499114283"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-8 py-4 rounded-full font-bold btn-glow shimmer hover:scale-105 transition-transform"
+              >
+                <School className="w-5 h-5" />
+                Visit My School
+              </a>
             </div>
           </ScrollSection>
         </div>

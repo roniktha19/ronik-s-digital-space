@@ -86,27 +86,62 @@ const SchoolPage = () => {
               </div>
             </ScrollSection>
 
-            {/* Buildings */}
+            {/* Buildings & Class Structure */}
             <ScrollSection animation="left" delay={300}>
               <div className="p-6 rounded-xl bg-blue-950/30 border border-blue-800/50 backdrop-blur-sm card-hover-yellow hover:bg-blue-900/30 hover:scale-[1.02] shimmer">
                 <h2 className="text-xl font-semibold text-cyan-400 mb-4 neon-glow flex items-center gap-2 transition-colors duration-300">
                   <Building className="w-5 h-5" />
-                  <span className="sticker">🏛️</span> School Buildings
+                  <span className="sticker">🏛️</span> School Buildings & Classes
                 </h2>
                 <div className="space-y-4">
+                  {/* Primary Building */}
                   <div className="p-4 bg-blue-900/30 rounded-lg border border-blue-800/30 hover:border-yellow-500/50 transition-all duration-300">
                     <h3 className="font-semibold text-cyan-300 mb-2"><span className="sticker">🏫</span> Primary Building</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Used for primary school classes (Grade 1-5). Designed for younger students 
-                      with colorful classrooms and play areas.
+                    <p className="text-muted-foreground text-sm mb-3">
+                      Used for primary school classes. Designed for younger students with colorful classrooms and play areas.
                     </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold border border-green-500/30">PG (Play Group)</span>
+                      <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold border border-green-500/30">Nursery</span>
+                      <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold border border-green-500/30">LKG</span>
+                      <span className="px-3 py-1 bg-green-500/20 text-green-300 rounded-full text-xs font-semibold border border-green-500/30">UKG</span>
+                      <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold border border-blue-500/30">Class 1</span>
+                      <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold border border-blue-500/30">Class 2</span>
+                      <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold border border-blue-500/30">Class 3</span>
+                      <span className="px-3 py-1 bg-blue-500/20 text-blue-300 rounded-full text-xs font-semibold border border-blue-500/30">Class 4</span>
+                    </div>
                   </div>
+                  
+                  {/* Secondary Building */}
                   <div className="p-4 bg-cyan-900/30 rounded-lg border border-cyan-800/30 hover:border-yellow-500/50 transition-all duration-300">
                     <h3 className="font-semibold text-cyan-300 mb-2"><span className="sticker">🏛️</span> Secondary Building</h3>
-                    <p className="text-muted-foreground text-sm">
-                      Used for secondary level (Grade 6-10) and college (+2) classes. 
-                      Equipped with science labs, computer labs, and library facilities.
+                    <p className="text-muted-foreground text-sm mb-3">
+                      Used for secondary level and college (+2/BBS) classes. Equipped with science labs, computer labs, and library.
                     </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-semibold border border-purple-500/30">Class 5</span>
+                      <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-semibold border border-purple-500/30">Class 6</span>
+                      <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-semibold border border-purple-500/30">Class 7</span>
+                      <span className="px-3 py-1 bg-purple-500/20 text-purple-300 rounded-full text-xs font-semibold border border-purple-500/30">Class 8</span>
+                      <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-xs font-semibold border border-indigo-500/30">Class 9</span>
+                      <span className="px-3 py-1 bg-indigo-500/20 text-indigo-300 rounded-full text-xs font-semibold border border-indigo-500/30">Class 10</span>
+                    </div>
+                  </div>
+
+                  {/* College Section */}
+                  <div className="p-4 bg-gradient-to-br from-amber-900/30 to-orange-900/30 rounded-lg border border-amber-700/50 hover:border-yellow-500/50 transition-all duration-300">
+                    <h3 className="font-semibold text-amber-300 mb-2"><span className="sticker">🎓</span> College Level (+2 & BBS)</h3>
+                    <p className="text-muted-foreground text-sm mb-3">
+                      Higher education programs including +2 and Bachelor in Business Studies (BBS).
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      <span className="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-xs font-semibold border border-amber-500/30">+2 Science</span>
+                      <span className="px-3 py-1 bg-amber-500/20 text-amber-300 rounded-full text-xs font-semibold border border-amber-500/30">+2 Management</span>
+                      <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs font-semibold border border-orange-500/30">BBS 1st Year</span>
+                      <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs font-semibold border border-orange-500/30">BBS 2nd Year</span>
+                      <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs font-semibold border border-orange-500/30">BBS 3rd Year</span>
+                      <span className="px-3 py-1 bg-orange-500/20 text-orange-300 rounded-full text-xs font-semibold border border-orange-500/30">BBS 4th Year</span>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -3,17 +3,20 @@ import ProfilePhoto from "@/components/ProfilePhoto";
 import FamilyCard from "@/components/FamilyCard";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import ScrollSection from "@/components/ScrollSection";
+import ParticleBackground from "@/components/ParticleBackground";
+import TypingText from "@/components/TypingText";
 import myImage from "@/assets/my_image.jpeg";
 import brotherImage from "@/assets/brother.jpeg";
 import momImage from "@/assets/mom.png";
 import dadImage from "@/assets/dad.jpg";
 import geometryDashImage from "@/assets/geometry-dash.png";
-import { Gamepad2, Star, Zap, School, User } from "lucide-react";
+import { Gamepad2, Star, Zap, School, User, Heart } from "lucide-react";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-secondary/30 to-background relative overflow-hidden">
       <HamburgerMenu />
+      <ParticleBackground />
       
       {/* Animated background orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -36,10 +39,12 @@ const Index = () => {
           </ScrollSection>
           <ScrollSection animation="up" delay={200}>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Hello, I am <span className="rainbow-text">Ronik Thapa Chhetri!</span>
+              Hello, I am <span className="rainbow-text">
+                <TypingText text="Ronik Thapa Chhetri!" speed={80} />
+              </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-6">
-              A 12-year-old student from Nepal who loves cycling, drawing, and exploring the world of computers!
+              A 12-year-old student from Nepal who loves cycling, drawing, and exploring the world of computers! 🚴‍♂️🎨💻
             </p>
             <Link
               to="/about"
@@ -56,9 +61,14 @@ const Index = () => {
       <section id="family" className="relative z-10 py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <ScrollSection animation="left">
-            <h2 className="text-4xl font-bold text-center mb-12 neon-glow">
+            <h2 className="text-4xl font-bold text-center mb-4 neon-glow flex items-center justify-center gap-3">
+              <span className="heartbeat">👨‍👩‍👦‍👦</span>
               My Family
+              <Heart className="w-8 h-8 text-red-400 heartbeat" />
             </h2>
+            <p className="text-center text-muted-foreground mb-12">
+              <span className="sticker">💖</span> The people I love the most <span className="sticker">💖</span>
+            </p>
           </ScrollSection>
           {/* Brother at top */}
           <ScrollSection animation="right" delay={100}>

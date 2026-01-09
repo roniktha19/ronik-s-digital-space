@@ -1,7 +1,8 @@
 import BackButton from "@/components/BackButton";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import ScrollSection from "@/components/ScrollSection";
-import { School, MapPin, Building, Users, BookOpen, GraduationCap, Target } from "lucide-react";
+import { School, MapPin, Building, Users, BookOpen, GraduationCap, Target, Phone } from "lucide-react";
+import schoolBuilding from "@/assets/school-building.jpg";
 
 const SchoolPage = () => {
   return (
@@ -19,6 +20,16 @@ const SchoolPage = () => {
 
           <ScrollSection animation="down">
             <div className="mt-8 flex flex-col items-center text-center">
+              {/* School Building Image */}
+              <div className="relative glow-border rounded-2xl overflow-hidden mb-6">
+                <img 
+                  src={schoolBuilding} 
+                  alt="Gaidakot Namuna Secondary School Building" 
+                  className="w-full max-w-md h-48 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-950/50 to-transparent" />
+              </div>
+              
               <div className="relative glow-border rounded-full p-6 color-pulse bg-gradient-to-br from-blue-500/30 to-cyan-500/30">
                 <School className="w-16 h-16 text-cyan-300" />
                 <div className="absolute inset-0 rounded-full bg-blue-500/30 blur-2xl -z-10 animate-pulse" />
@@ -45,6 +56,15 @@ const SchoolPage = () => {
                     <MapPin className="w-4 h-4 mt-1 text-cyan-400" />
                     <span>
                       <span className="text-cyan-300/70">Location:</span> Gaidakot Municipality, Ward No. 2, Nawalparasi (East), Nepal
+                    </span>
+                  </li>
+                  <li className="hover:translate-x-2 transition-transform duration-200 flex items-start gap-2">
+                    <Phone className="w-4 h-4 mt-1 text-cyan-400" />
+                    <span>
+                      <span className="text-cyan-300/70">Contact:</span>{" "}
+                      <a href="tel:9748203301" className="text-cyan-400 hover:text-cyan-300 transition-colors underline">
+                        9748203301
+                      </a>
                     </span>
                   </li>
                 </ul>

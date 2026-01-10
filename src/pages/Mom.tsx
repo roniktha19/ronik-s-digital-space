@@ -2,15 +2,13 @@ import BackButton from "@/components/BackButton";
 import ProfilePhoto from "@/components/ProfilePhoto";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import ScrollSection from "@/components/ScrollSection";
+import ParticleBackground from "@/components/ParticleBackground";
 import momImage from "@/assets/mom.png";
 
 const Mom = () => {
   return (
     <div className="min-h-screen pb-12 bg-gradient-to-br from-pink-300 via-pink-200/50 to-pink-100 relative overflow-hidden">
-      {/* Animated background orbs */}
-      <div className="absolute top-20 left-10 w-64 h-64 bg-pink-400/30 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-40 right-10 w-80 h-80 bg-rose-300/25 rounded-full blur-3xl float" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-fuchsia-300/20 rounded-full blur-3xl color-pulse" />
+      <ParticleBackground />
       
       <HamburgerMenu />
       

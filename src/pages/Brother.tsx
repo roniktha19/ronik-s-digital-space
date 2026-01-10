@@ -2,15 +2,13 @@ import BackButton from "@/components/BackButton";
 import ProfilePhoto from "@/components/ProfilePhoto";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import ScrollSection from "@/components/ScrollSection";
+import ParticleBackground from "@/components/ParticleBackground";
 import brotherImage from "@/assets/brother.jpeg";
 
 const Brother = () => {
   return (
     <div className="min-h-screen pb-12 bg-gradient-to-br from-red-950 via-red-900/50 to-background relative overflow-hidden">
-      {/* Animated background orbs */}
-      <div className="absolute top-20 left-10 w-64 h-64 bg-red-500/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute bottom-40 right-10 w-80 h-80 bg-orange-500/15 rounded-full blur-3xl float" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-red-600/10 rounded-full blur-3xl color-pulse" />
+      <ParticleBackground />
       
       <HamburgerMenu />
       

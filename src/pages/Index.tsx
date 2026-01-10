@@ -53,9 +53,10 @@ const Index = () => {
       <section id="family" className="relative z-10 py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <ScrollSection animation="left">
-            <h2 className="text-4xl font-bold text-center mb-12 neon-glow">
-              My Family
+            <h2 className="text-4xl font-bold text-center mb-4 rainbow-text">
+              <span className="sticker">👨‍👩‍👦‍👦</span> My Family <span className="sticker">💖</span>
             </h2>
+            <p className="text-center text-muted-foreground mb-12">Hover over the cards to see the magic! ✨</p>
           </ScrollSection>
           {/* Brother at top */}
           <ScrollSection animation="right" delay={100}>

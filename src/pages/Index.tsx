@@ -3,6 +3,7 @@ import ProfilePhoto from "@/components/ProfilePhoto";
 import FamilyCard from "@/components/FamilyCard";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import ScrollSection from "@/components/ScrollSection";
+import ParticleBackground from "@/components/ParticleBackground";
 import myImage from "@/assets/my_image.jpeg";
 import brotherImage from "@/assets/brother.jpeg";
 import momImage from "@/assets/mom.png";
@@ -15,12 +16,8 @@ const Index = () => {
     <div className="min-h-screen bg-gradient-to-br from-background via-secondary/30 to-background relative overflow-hidden">
       <HamburgerMenu />
       
-      {/* Animated background orbs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl float" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent/20 rounded-full blur-3xl float" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-secondary/30 rounded-full blur-3xl float" style={{ animationDelay: '4s' }} />
-      </div>
+      {/* Enhanced Particle Background */}
+      <ParticleBackground />
       
       {/* Hero Section - About Myself */}
       <section className="relative z-10 pt-20 pb-16 px-4">

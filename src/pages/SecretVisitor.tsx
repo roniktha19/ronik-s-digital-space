@@ -52,6 +52,17 @@ const SecretVisitor = () => {
                 <span className="px-4 py-2 rounded-full bg-accent/20 text-accent text-sm">👀 Viewer</span>
                 <span className="px-4 py-2 rounded-full bg-cyan-500/20 text-cyan-400 text-sm">🌟 Curious</span>
               </div>
+              
+              {/* Redirect Button */}
+              <a 
+                href="https://lovable.dev/projects/f095bc2b-8fa0-4ce0-9c42-c2c8e0d0cab3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-8 inline-flex items-center gap-2 px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-bold text-lg hover:scale-105 transition-transform duration-300 shimmer"
+              >
+                <Sparkles className="w-5 h-5" />
+                Enter Ronik's Workshop 🚀
+              </a>
             </div>
             
             <p className="mt-8 text-muted-foreground/50 text-sm">

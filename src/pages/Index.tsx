@@ -4,6 +4,7 @@ import FamilyCard from "@/components/FamilyCard";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import ScrollSection from "@/components/ScrollSection";
 import ParticleBackground from "@/components/ParticleBackground";
+import Footer from "@/components/Footer";
 import myImage from "@/assets/my_image.jpeg";
 import brotherImage from "@/assets/brother.jpeg";
 import momImage from "@/assets/mom.png";
@@ -181,6 +182,9 @@ const Index = () => {
           </ScrollSection>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 };

@@ -10,6 +10,7 @@ import Mom from "./pages/Mom";
 import Dad from "./pages/Dad";
 import Games from "./pages/Games";
 import School from "./pages/School";
+import SecretVisitor from "./pages/SecretVisitor";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/family/dad" element={<Dad />} />
           <Route path="/games" element={<Games />} />
           <Route path="/school" element={<School />} />
+          <Route path="/secret-visitor" element={<SecretVisitor />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

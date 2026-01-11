@@ -3,6 +3,7 @@ import ProfilePhoto from "@/components/ProfilePhoto";
 import HamburgerMenu from "@/components/HamburgerMenu";
 import ParticleBackground from "@/components/ParticleBackground";
 import ScrollSection from "@/components/ScrollSection";
+import Footer from "@/components/Footer";
 import myImage from "@/assets/my_image.jpeg";
 
 const About = () => {
@@ -90,6 +91,9 @@ const About = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer with secret button */}
+      <Footer showSecret={true} />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import HamburgerMenu from "@/components/HamburgerMenu";
 import ScrollSection from "@/components/ScrollSection";
 import ParticleBackground from "@/components/ParticleBackground";
 import Footer from "@/components/Footer";
+import TypingText from "@/components/TypingText";
 import myImage from "@/assets/my_image.jpeg";
 import brotherImage from "@/assets/brother.jpeg";
 import momImage from "@/assets/mom.png";
@@ -13,6 +14,14 @@ import geometryDashImage from "@/assets/geometry-dash.png";
 import { Gamepad2, Star, Zap, School, User } from "lucide-react";
 
 const Index = () => {
+  const typingPhrases = [
+    "Ronik Thapa Chhetri!",
+    "a Creative Kid!",
+    "a Gamer!",
+    "a Student!",
+    "an Explorer!"
+  ];
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-secondary/30 to-background relative overflow-hidden">
       <HamburgerMenu />
@@ -34,7 +43,7 @@ const Index = () => {
           </ScrollSection>
           <ScrollSection animation="up" delay={200}>
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
-              Hello, I am <span className="rainbow-text">Ronik Thapa Chhetri!</span>
+              Hello, I am <TypingText phrases={typingPhrases} speed={80} wait={2000} />
             </h1>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-6">
               A 12-year-old student from Nepal who loves cycling, drawing, and exploring the world of computers!

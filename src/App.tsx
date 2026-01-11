@@ -2,16 +2,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Index from "./pages/Index";
-import About from "./pages/About";
-import Brother from "./pages/Brother";
-import Mom from "./pages/Mom";
-import Dad from "./pages/Dad";
-import Games from "./pages/Games";
-import School from "./pages/School";
-import SecretVisitor from "./pages/SecretVisitor";
-import NotFound from "./pages/NotFound";
+import { BrowserRouter } from "react-router-dom";
+import AnimatedRoutes from "./components/AnimatedRoutes";
 
 const queryClient = new QueryClient();
 
@@ -21,17 +13,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/family/brother" element={<Brother />} />
-          <Route path="/family/mom" element={<Mom />} />
-          <Route path="/family/dad" element={<Dad />} />
-          <Route path="/games" element={<Games />} />
-          <Route path="/school" element={<School />} />
-          <Route path="/secret-visitor" element={<SecretVisitor />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+        <AnimatedRoutes />
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
